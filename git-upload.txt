@@ -1,0 +1,7 @@
+
+#! /bin/bash
+
+git config --global user.email angers.martins@gmail.com
+git add .
+git commit -m "$(date '%Y%M%D_%H_%M')_upload_from_cli"
+git push origin master

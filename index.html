@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
+	 crossorigin="anonymous">
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+
+		header {
+			text-align: center;
+			background-color: gray
+		}
+
+		main {
+			background-color: red
+		}
+
+		main {}
+
+		aside {
+
+			background-color: skyblue
+		}
+
+		footer {
+			color: white;
+			background-color: purple
+		}
+
+		[role="main"] {
+			background-color: green
+		}
+
+img.minion {
+width: 50px;
+position: fixed;
+top: 70px;
+left: 100px;
+}
+img.minion:focus {
+  border: 10px solid red; 
+
+}
+
+	</style>
+</head>
+
+<body>
+	<h1>hello</h1>
+
+	<div class="container">
+		<div class="row">
+			<header class="col"></header>
+		</div>
+		<div class="row justify-content-center">
+
+			<aside class="col-3">aside</aside>
+			<div role="main" class="col-7">main content</div>
+
+		</div>
+		<div class="row">
+			<footer class="col">footer</footer>
+		</div>
+	</div>
+
+<img id="minion" tabindex="1" style="left: 30px; top:10px; width: 50px" class="minion" src="https://images-na.ssl-images-amazon.com/images/I/810lcy2NBuL._AC_SL1500_.jpg" alt="">
+
+<script>
+  const m = document.getElementById('minion');
+  const x = m.style.left;
+  const y = m.style.top;
+  console.log(x, y);
+
+let sizeCounter = 0;
+
+  const moveMinion =  (event) => {
+    if (event.code=="RightShift"){
+      sizeCounter++;
+      if (sizeCounter==2){
+        sizeCounter=0;
+        m.style.width = parseInt(m.style.width)+10+"px";
+      }
+      
+    }   
+     if (event.code=="ArrowDown"){
+      m.style.top = parseInt(m.style.top)+10+"px";
+    } 
+     if (event.code=="ArrowUp"){
+      m.style.top = parseInt(m.style.top)-10+"px";
+    }
+
+     if (event.code=="ArrowLeft"){
+      m.style.left = parseInt(m.style.left)-10+"px";
+    }
+     if (event.code=="ArrowRight"){
+      m.style.left = parseInt(m.style.left)+10+"px";
+    }
+  };
+  m.addEventListener('keyup', moveMinion);
+
+
+
+</script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Testing some stuff</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css" 
+	integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjssha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R"
+	crossorigin="anonymous">
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		header {
+			text-align: center;
+			background-color: teal
+		}
+		main {
+			background-color: opal
+		}
+		main{}
+
+	
+
+	</style>
+
+</head>
+<html>
+<body>
+	<h3>Hello!</h3>
+	<h1> Te Mārtiņš Ņemas ar lietām </h1>
+
+</html>
+
